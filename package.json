@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "concurrently -k -n SERVER,CLIENT -c yellow,cyan \"npm:dev:server\" \"npm:dev:client\"",
     "dev:server": "node server.js",
-    "dev:client": "vite",
+    "dev:client": "vite --host",
     "test": "node --test tests/scoring.test.js tests/pipeline.test.js"
   },
   "dependencies": {
