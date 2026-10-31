@@ -1,0 +1,23 @@
+{
+  "name": "autograder",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "concurrently -k -n SERVER,CLIENT -c yellow,cyan \"npm:dev:server\" \"npm:dev:client\"",
+    "dev:server": "node server.js",
+    "dev:client": "vite",
+    "test": "node --test tests/scoring.test.js tests/pipeline.test.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2",
+    "lucide-react": "^0.383.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.3.1",
+    "concurrently": "^8.2.2",
+    "vite": "^5.4.0"
+  }
+}

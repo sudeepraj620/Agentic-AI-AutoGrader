@@ -1,0 +1,24 @@
+{
+  "scale": 100,
+  "missing_metric_policy": "error",
+  "skipped_metric_policy": "renormalize",
+  "limits": {
+    "compile_timeout_ms": 15000,
+    "run_timeout_ms": 1000,
+    "memory_mb": 256,
+    "max_output_bytes": 65536
+  },
+  "metrics": {
+    "correctness":     { "enabled": true,  "weight": 0.50 },
+    "memory_safety":   { "enabled": false, "weight": 0.20 },
+    "static_analysis": { "enabled": true,  "weight": 0.20, "warning_penalty": 8, "error_penalty": 30, "banned_penalty": 10 },
+    "complexity":      { "enabled": true,  "weight": 0.15, "max_ok": 10, "zero_at": 30 },
+    "similarity":      { "enabled": true,  "weight": 0.15, "threshold": 0.8 }
+  },
+  "runtime_failure_cap": {
+    "enabled": true,
+    "cap": 20,
+    "statuses": ["timeout", "crash", "runtime_error", "execution_error", "output_limit"]
+  },
+  "compile_failure_cap": { "enabled": true, "cap": 0 }
+}

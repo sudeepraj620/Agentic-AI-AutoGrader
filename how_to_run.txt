@@ -1,0 +1,24 @@
+AutoGrader - how to run
+=======================
+
+Requirements: Node.js 18+  and  gcc (check: node --version, gcc --version)
+
+1. Open a terminal in the project folder:
+     cd autograder
+
+2. Install dependencies (first time only):
+     npm install
+
+3. Start the app (API + UI together):
+     npm run dev
+
+4. Open in your browser:
+     http://localhost:5173
+   Top-right chip should say "gcc ready".
+
+5. Grade: pick a demo or paste C code -> click "grade submission".
+
+Run the tests:
+     npm test
+
+Stop the app: press Ctrl+C in the terminal.
